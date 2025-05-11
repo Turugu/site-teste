@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokédex - Mundo Pokémon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #222;
+        }
+        header {
+            background: #ef5350;
+            color: #fff;
+            padding: 2rem 0 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        header img {
+            width: 80px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        header h1 {
+            display: inline;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        nav {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            background: #42a5f5;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            margin: 0 0.5rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        nav a:hover {
+            background: #1976d2;
+        }
+        main {
+            max-width: 1100px;
+            margin: 2rem auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 2.5rem;
+        }
+        h2 {
+            color: #ef5350;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ef5350;
+            display: inline-block;
+            padding-bottom: 0.2rem;
+        }
+        .pokedex {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        .pokemon-card {
+            background: #f7f7f7;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .pokemon-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 6px 20px rgba(239,83,80,0.15);
+        }
+        .pokemon-card img {
+            width: 100px;
+            margin-bottom: 0.5rem;
+        }
+        .pokemon-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1976d2;
+        }
+        .pokemon-type {
+            display: inline-block;
+            background: #ffd54f;
+            color: #333;
+            border-radius: 12px;
+            padding: 0.2rem 0.8rem;
+            margin: 0.2rem 0.2rem 0 0;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .about-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .about-list li {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+        }
+        .info-table th, .info-table td {
+            border: 1px solid #ddd;
+            padding: 0.5rem 1rem;
+            text-align: left;
+        }
+        .info-table th {
+            background: #ef5350;
+            color: #fff;
+        }
+        footer {
+            background: #ef5350;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            border-radius: 0 0 16px 16px;
+            margin-top: 2rem;
+        }
+        @media (max-width: 700px) {
+            main {
+                padding: 1rem;
+            }
+            .pokedex {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="Pokémon Logo">
+        <h1>Mundo Pokémon</h1>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#historia">História</a>
+            <a href="#jogos">Jogos</a>
+            <a href="#anime">Anime</a>
+            <a href="#pokedex">Pokédex</a>
+            <a href="#tipos">Tipos</a>
+            <a href="#curiosidades">Curiosidades</a>
+        </nav>
+    </header>
+    <main>
+        <section id="sobre">
+            <h2>Sobre Pokémon</h2>
+            <ul class="about-list">
+                <li><strong>Pokémon</strong> é uma franquia criada pela Nintendo, Game Freak e Creatures em 1996.</li>
+                <li>O universo Pokémon é habitado por criaturas chamadas <strong>Pokémon</strong>, que podem ser capturadas, treinadas e batalhar entre si.</li>
+                <li>Existem atualmente mais de <strong>1000 espécies</strong> de Pokémon, divididas em diferentes gerações.</li>
+                <li>Além dos jogos, Pokémon possui anime, filmes, mangás, cartas e diversos produtos licenciados.</li>
+                <li>O objetivo principal dos treinadores é capturar todos os Pokémon e se tornar um Mestre Pokémon.</li>
+            </ul>
+        </section>
+        <section id="historia">
+            <h2>História da Franquia</h2>
+            <ul class="about-list">
+                <li>Pokémon foi lançado no Japão em 1996 com os jogos <strong>Pokémon Red & Green</strong> para Game Boy.</li>
+                <li>O criador, Satoshi Tajiri, se inspirou em sua infância colecionando insetos.</li>
+                <li>O sucesso dos jogos levou ao lançamento do anime, cartas colecionáveis e outros produtos.</li>
+                <li>Pokémon se tornou uma das franquias de maior sucesso do mundo, com fãs de todas as idades.</li>
+            </ul>
+        </section>
+        <section id="jogos">
+            <h2>Jogos Pokémon</h2>
+            <table class="info-table">
+                <tr>
+                    <th>Geração</th>
+                    <th>Jogos Principais</th>
+                    <th>Região</th>
+                </tr>
+                <tr>
+                    <td>1ª</td>
+                    <td>Red, Blue, Yellow</td>
+                    <td>Kanto</td>
+                </tr>
+                <tr>
+                    <td>2ª</td>
+                    <td>Gold, Silver, Crystal</td>
+                    <td>Johto</td>
+                </tr>
+                <tr>
+                    <td>3ª</td>
+                    <td>Ruby, Sapphire, Emerald</td>
+                    <td>Hoenn</td>
+                </tr>
+                <tr>
+                    <td>4ª</td>
+                    <td>Diamond, Pearl, Platinum</td>
+                    <td>Sinnoh</td>
+                </tr>
+                <tr>
+                    <td>5ª</td>
+                    <td>Black, White, Black 2, White 2</td>
+                    <td>Unova</td>
+                </tr>
+                <tr>
+                    <td>6ª</td>
+                    <td>X, Y</td>
+                    <td>Kalos</td>
+                </tr>
+                <tr>
+                    <td>7ª</td>
+                    <td>Sun, Moon, Ultra Sun, Ultra Moon</td>
+                    <td>Alola</td>
+                </tr>
+                <tr>
+                    <td>8ª</td>
+                    <td>Sword, Shield</td>
+                    <td>Galar</td>
+                </tr>
+                <tr>
+                    <td>9ª</td>
+                    <td>Scarlet, Violet</td>
+                    <td>Paldea</td>
+                </tr>
+            </table>
+        </section>
+        <section id="anime">
+            <h2>Anime Pokémon</h2>
+            <ul class="about-list">
+                <li>O anime estreou em 1997, acompanhando Ash Ketchum e seu Pikachu em jornadas para se tornar Mestre Pokémon.</li>
+                <li>O anime já conta com mais de 1200 episódios e diversos filmes.</li>
+                <li>Além de Ash, outros protagonistas e regiões foram explorados ao longo dos anos.</li>
+                <li>O anime é famoso por frases como "Eu escolho você!" e pelo icônico Team Rocket.</li>
+            </ul>
+        </section>
+        <section id="pokedex">
+            <h2>Pokédex</h2>
+            <div class="pokedex">
+                <!-- Exemplos de Pokémon -->
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+                    <div class="pokemon-name">Pikachu</div>
+                    <div class="pokemon-type" style="background:#FFD700;">Elétrico</div>
+                    <div><strong>Nº:</strong> 025</div>
+                    <div><strong>Altura:</strong> 0,4m</div>
+                    <div><strong>Peso:</strong> 6,0kg</div>
+                    <div><strong>Descrição:</strong> Pikachu armazena eletricidade em suas bochechas e solta descargas elétricas quando ameaçado.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur">
+                    <div class="pokemon-name">Bulbasaur</div>
+                    <div class="pokemon-type" style="background:#78C850;">Planta</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div><strong>Nº:</strong> 001</div>
+                    <div><strong>Altura:</strong> 0,7m</div>
+                    <div><strong>Peso:</strong> 6,9kg</div>
+                    <div><strong>Descrição:</strong> Bulbasaur possui uma semente em suas costas que cresce conforme ele evolui.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" alt="Ivysaur">
+                    <div class="pokemon-name">Ivysaur</div>
+                    <div class="pokemon-type" style="background:#78C850;">Planta</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div><strong>Nº:</strong> 002</div>
+                    <div><strong>Altura:</strong> 1,0m</div>
+                    <div><strong>Peso:</strong> 13,0kg</div>
+                    <div><strong>Descrição:</strong> Quando o bulbo em suas costas cresce, Ivysaur fica mais pesado e forte.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" alt="Venusaur">
+                    <div class="pokemon-name">Venusaur</div>
+                    <div class="pokemon-type" style="background:#78C850;">Planta</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div><strong>Nº:</strong> 003</div>
+                    <div><strong>Altura:</strong> 2,0m</div>
+                    <div><strong>Peso:</strong> 100,0kg</div>
+                    <div><strong>Descrição:</strong> A flor em suas costas floresce quando absorve energia suficiente do sol.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Charmander">
+                    <div class="pokemon-name">Charmander</div>
+                    <div class="pokemon-type" style="background:#F08030;">Fogo</div>
+                    <div><strong>Nº:</strong> 004</div>
+                    <div><strong>Altura:</strong> 0,6m</div>
+                    <div><strong>Peso:</strong> 8,5kg</div>
+                    <div><strong>Descrição:</strong> A chama na cauda de Charmander indica sua saúde e emoções.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png" alt="Charmeleon">
+                    <div class="pokemon-name">Charmeleon</div>
+                    <div class="pokemon-type" style="background:#F08030;">Fogo</div>
+                    <div><strong>Nº:</strong> 005</div>
+                    <div><strong>Altura:</strong> 1,1m</div>
+                    <div><strong>Peso:</strong> 19,0kg</div>
+                    <div><strong>Descrição:</strong> Charmeleon é agressivo e sua chama fica mais intensa quando está bravo.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" alt="Charizard">
+                    <div class="pokemon-name">Charizard</div>
+                    <div class="pokemon-type" style="background:#F08030;">Fogo</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div><strong>Nº:</strong> 006</div>
+                    <div><strong>Altura:</strong> 1,7m</div>
+                    <div><strong>Peso:</strong> 90,5kg</div>
+                    <div><strong>Descrição:</strong> Charizard cospe fogo capaz de derreter qualquer coisa.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Squirtle">
+                    <div class="pokemon-name">Squirtle</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div><strong>Nº:</strong> 007</div>
+                    <div><strong>Altura:</strong> 0,5m</div>
+                    <div><strong>Peso:</strong> 9,0kg</div>
+                    <div><strong>Descrição:</strong> Squirtle pode retirar-se em sua carapaça para se proteger e disparar água com força.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png" alt="Wartortle">
+                    <div class="pokemon-name">Wartortle</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div><strong>Nº:</strong> 008</div>
+                    <div><strong>Altura:</strong> 1,0m</div>
+                    <div><strong>Peso:</strong> 22,5kg</div>
+                    <div><strong>Descrição:</strong> Suas orelhas e cauda peludas são símbolos de longevidade.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png" alt="Blastoise">
+                    <div class="pokemon-name">Blastoise</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div><strong>Nº:</strong> 009</div>
+                    <div><strong>Altura:</strong> 1,6m</div>
+                    <div><strong>Peso:</strong> 85,5kg</div>
+                    <div><strong>Descrição:</strong> Possui canhões de água em seu casco que disparam jatos potentes.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png" alt="Caterpie">
+                    <div class="pokemon-name">Caterpie</div>
+                    <div class="pokemon-type" style="background:#A8B820;">Inseto</div>
+                    <div><strong>Nº:</strong> 010</div>
+                    <div><strong>Altura:</strong> 0,3m</div>
+                    <div><strong>Peso:</strong> 2,9kg</div>
+                    <div><strong>Descrição:</strong> Libera um odor forte para se proteger de predadores.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png" alt="Butterfree">
+                    <div class="pokemon-name">Butterfree</div>
+                    <div class="pokemon-type" style="background:#A8B820;">Inseto</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div><strong>Nº:</strong> 012</div>
+                    <div><strong>Altura:</strong> 1,1m</div>
+                    <div><strong>Peso:</strong> 32,0kg</div>
+                    <div><strong>Descrição:</strong> Suas asas liberam pós venenosos para afastar inimigos.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png" alt="Pidgey">
+                    <div class="pokemon-name">Pidgey</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div><strong>Nº:</strong> 016</div>
+                    <div><strong>Altura:</strong> 0,3m</div>
+                    <div><strong>Peso:</strong> 1,8kg</div>
+                    <div><strong>Descrição:</strong> Muito comum, é dócil e fácil de domesticar.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png" alt="Rattata">
+                    <div class="pokemon-name">Rattata</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div><strong>Nº:</strong> 019</div>
+                    <div><strong>Altura:</strong> 0,3m</div>
+                    <div><strong>Peso:</strong> 3,5kg</div>
+                    <div><strong>Descrição:</strong> Seus dentes crescem continuamente, por isso rói tudo.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png" alt="Spearow">
+                    <div class="pokemon-name">Spearow</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div><strong>Nº:</strong> 021</div>
+                    <div><strong>Altura:</strong> 0,3m</div>
+                    <div><strong>Peso:</strong> 2,0kg</div>
+                    <div><strong>Descrição:</strong> Pequeno, mas muito agressivo e protetor de seu território.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png" alt="Jigglypuff">
+                    <div class="pokemon-name">Jigglypuff</div>
+                    <div class="pokemon-type" style="background:#EE99AC;">Fada</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div><strong>Nº:</strong> 039</div>
+                    <div><strong>Altura:</strong> 0,5m</div>
+                    <div><strong>Peso:</strong> 5,5kg</div>
+                    <div><strong>Descrição:</strong> Canta uma canção de ninar que faz todos dormirem.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png" alt="Meowth">
+                    <div class="pokemon-name">Meowth</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div><strong>Nº:</strong> 052</div>
+                    <div><strong>Altura:</strong> 0,4m</div>
+                    <div><strong>Peso:</strong> 4,2kg</div>
+                    <div><strong>Descrição:</strong> Adora moedas brilhantes e é famoso pelo Team Rocket.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png" alt="Psyduck">
+                    <div class="pokemon-name">Psyduck</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div><strong>Nº:</strong> 054</div>
+                    <div><strong>Altura:</strong> 0,8m</div>
+                    <div><strong>Peso:</strong> 19,6kg</div>
+                    <div><strong>Descrição:</strong> Sofre de dores de cabeça e libera poderes psíquicos sem querer.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/63.png" alt="Abra">
+                    <div class="pokemon-name">Abra</div>
+                    <div class="pokemon-type" style="background:#F85888;">Psíquico</div>
+                    <div><strong>Nº:</strong> 063</div>
+                    <div><strong>Altura:</strong> 0,9m</div>
+                    <div><strong>Peso:</strong> 19,5kg</div>
+                    <div><strong>Descrição:</strong> Dorme 18 horas por dia e teleporta-se ao menor sinal de perigo.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png" alt="Machop">
+                    <div class="pokemon-name">Machop</div>
+                    <div class="pokemon-type" style="background:#C03028;">Lutador</div>
+                    <div><strong>Nº:</strong> 066</div>
+                    <div><strong>Altura:</strong> 0,8m</div>
+                    <div><strong>Peso:</strong> 19,5kg</div>
+                    <div><strong>Descrição:</strong> Treina constantemente para fortalecer seus músculos.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png" alt="Geodude">
+                    <div class="pokemon-name">Geodude</div>
+                    <div class="pokemon-type" style="background:#B8A038;">Rocha</div>
+                    <div class="pokemon-type" style="background:#E0C068;">Terrestre</div>
+                    <div><strong>Nº:</strong> 074</div>
+                    <div><strong>Altura:</strong> 0,4m</div>
+                    <div><strong>Peso:</strong> 20,0kg</div>
+                    <div><strong>Descrição:</strong> Parece uma pedra comum, mas é muito resistente.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png" alt="Gastly">
+                    <div class="pokemon-name">Gastly</div>
+                    <div class="pokemon-type" style="background:#705898;">Fantasma</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div><strong>Nº:</strong> 092</div>
+                    <div><strong>Altura:</strong> 1,3m</div>
+                    <div><strong>Peso:</strong> 0,1kg</div>
+                    <div><strong>Descrição:</strong> É feito quase totalmente de gás venenoso.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png" alt="Gengar">
+                    <div class="pokemon-name">Gengar</div>
+                    <div class="pokemon-type" style="background:#705898;">Fantasma</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div><strong>Nº:</strong> 094</div>
+                    <div><strong>Altura:</strong> 1,5m</div>
+                    <div><strong>Peso:</strong> 40,5kg</div>
+                    <div><strong>Descrição:</strong> Adora pregar peças e se esconde nas sombras das pessoas.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png" alt="Onix">
+                    <div class="pokemon-name">Onix</div>
+                    <div class="pokemon-type" style="background:#B8A038;">Rocha</div>
+                    <div class="pokemon-type" style="background:#E0C068;">Terrestre</div>
+                    <div><strong>Nº:</strong> 095</div>
+                    <div><strong>Altura:</strong> 8,8m</div>
+                    <div><strong>Peso:</strong> 210,0kg</div>
+                    <div><strong>Descrição:</strong> Seu corpo é formado por grandes pedras e pode cavar túneis.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png" alt="Eevee">
+                    <div class="pokemon-name">Eevee</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div><strong>Nº:</strong> 133</div>
+                    <div><strong>Altura:</strong> 0,3m</div>
+                    <div><strong>Peso:</strong> 6,5kg</div>
+                    <div><strong>Descrição:</strong> Possui múltiplas evoluções possíveis, dependendo do ambiente e itens.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png" alt="Mewtwo">
+                    <div class="pokemon-name">Mewtwo</div>
+                    <div class="pokemon-type" style="background:#7038F8;">Psíquico</div>
+                    <div><strong>Nº:</strong> 150</div>
+                    <div><strong>Altura:</strong> 2,0m</div>
+                    <div><strong>Peso:</strong> 122,0kg</div>
+                    <div><strong>Descrição:</strong> Mewtwo foi criado geneticamente para ser o Pokémon mais poderoso.</div>
+                </div>
+                <div class="pokemon-card">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png" alt="Mew">
+                    <div class="pokemon-name">Mew</div>
+                    <div class="pokemon-type" style="background:#7038F8;">Psíquico</div>
+                    <div><strong>Nº:</strong> 151</div>
+                    <div><strong>Altura:</strong> 0,4m</div>
+                    <div><strong>Peso:</strong> 4,0kg</div>
+                    <div><strong>Descrição:</strong> Dizem que contém o DNA de todos os Pokémon.</div>
+                </div>
+                <!-- Adicione mais Pokémon conforme desejar -->
+            </div>
+            <p style="margin-top:1rem; text-align:center;">Mostrando apenas alguns Pokémon. Existem mais de 1000 espécies!</p>
+        </section>
+        <section id="tipos">
+            <h2>Tipos de Pokémon</h2>
+            <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+                <span class="pokemon-type" style="background:#A8A878;">Normal</span>
+                <span class="pokemon-type" style="background:#F08030;">Fogo</span>
+                <span class="pokemon-type" style="background:#6890F0;">Água</span>
+                <span class="pokemon-type" style="background:#78C850;">Planta</span>
+                <span class="pokemon-type" style="background:#F8D030;">Elétrico</span>
+                <span class="pokemon-type" style="background:#A040A0;">Veneno</span>
+                <span class="pokemon-type" style="background:#C03028;">Lutador</span>
+                <span class="pokemon-type" style="background:#A890F0;">Voador</span>
+                <span class="pokemon-type" style="background:#E0C068;">Terrestre</span>
+                <span class="pokemon-type" style="background:#B8A038;">Inseto</span>
+                <span class="pokemon-type" style="background:#705898;">Fantasma</span>
+                <span class="pokemon-type" style="background:#7038F8;">Psíquico</span>
+                <span class="pokemon-type" style="background:#98D8D8;">Gelo</span>
+                <span class="pokemon-type" style="background:#B8B8D0;">Aço</span>
+                <span class="pokemon-type" style="background:#EE99AC;">Fada</span>
+                <span class="pokemon-type" style="background:#705848;">Sombrio</span>
+                <span class="pokemon-type" style="background:#6F35FC;">Dragão</span>
+                <span class="pokemon-type" style="background:#E0C068;">Rocha</span>
+            </div>
+            <p style="margin-top:1rem;">Cada tipo possui vantagens e desvantagens em batalhas. Por exemplo, <strong>Água</strong> é forte contra <strong>Fogo</strong>, mas fraco contra <strong>Elétrico</strong>.</p>
+        </section>
+        <section id="curiosidades">
+            <h2>Curiosidades</h2>
+            <ul class="about-list">
+                <li>O Pokémon mais leve é Gastly (0,1kg) e o mais pesado é Celesteela (2200kg).</li>
+                <li>O Pokémon mais alto é Eternatus (20m).</li>
+                <li>Pikachu é o mascote oficial da franquia Pokémon.</li>
+                <li>O nome "Pokémon" vem de "Pocket Monsters" (Monstros de Bolso).</li>
+                <li>Pokémon já vendeu mais de 440 milhões de jogos no mundo todo.</li>
+                <li>Existem jogos, cartas, animes, filmes, brinquedos e até parques temáticos de Pokémon.</li>
+                <li>Existem Pokémon inspirados em animais, plantas, objetos e até lendas urbanas.</li>
+                <li>O anime Pokémon já foi exibido em mais de 160 países.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 Mundo Pokémon. Não oficial. Imagens e nomes são propriedade da Nintendo, Game Freak e The Pokémon Company.
+    </footer>
+</body>
+</html>
