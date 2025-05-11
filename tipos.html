@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipos de Pokémon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tipos de Pokémon</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="historia.html">História</a>
+            <a href="jogos.html">Jogos</a>
+            <a href="anime.html">Anime</a>
+            <a href="pokedex.html">Pokédex</a>
+            <a href="curiosidades.html">Curiosidades</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Tipos de Pokémon</h2>
+            <div class="types-grid">
+                <div class="type-card" style="background:#A8A878;">Normal</div>
+                <div class="type-card" style="background:#F08030;">Fogo</div>
+                <div class="type-card" style="background:#6890F0;">Água</div>
+                <div class="type-card" style="background:#78C850;">Planta</div>
+                <div class="type-card" style="background:#F8D030;">Elétrico</div>
+                <div class="type-card" style="background:#A040A0;">Veneno</div>
+                <div class="type-card" style="background:#C03028;">Lutador</div>
+                <div class="type-card" style="background:#A890F0;">Voador</div>
+                <div class="type-card" style="background:#E0C068;">Terrestre</div>
+                <div class="type-card" style="background:#A8B820;">Inseto</div>
+                <div class="type-card" style="background:#705898;">Fantasma</div>
+                <div class="type-card" style="background:#F85888;">Psíquico</div>
+                <div class="type-card" style="background:#98D8D8;">Gelo</div>
+                <div class="type-card" style="background:#B8B8D0;">Aço</div>
+                <div class="type-card" style="background:#EE99AC;">Fada</div>
+                <div class="type-card" style="background:#705848;">Sombrio</div>
+                <div class="type-card" style="background:#6F35FC;">Dragão</div>
+                <div class="type-card" style="background:#B8A038;">Rocha</div>
+            </div>
+            <p style="margin-top:1rem;">Cada tipo possui vantagens e desvantagens em batalhas. Por exemplo, <strong>Água</strong> é forte contra <strong>Fogo</strong>, mas fraco contra <strong>Elétrico</strong>.</p>
+            <div class="type-effectiveness-table">
+                <h3 style="margin-top:2rem;">Fraquezas e Resistências dos Tipos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Forte Contra</th>
+                            <th>Fraco Contra</th>
+                            <th>Resistente a</th>
+                            <th>Vulnerável a</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Normal</td>
+                            <td>-</td>
+                            <td>Rocha, Fantasma, Aço</td>
+                            <td>-</td>
+                            <td>Lutador</td>
+                        </tr>
+                        <tr>
+                            <td>Fogo</td>
+                            <td>Planta, Inseto, Gelo, Aço</td>
+                            <td>Fogo, Água, Rocha, Dragão</td>
+                            <td>Fogo, Grama, Gelo, Inseto, Fada, Aço</td>
+                            <td>Água, Rocha, Terrestre</td>
+                        </tr>
+                        <tr>
+                            <td>Água</td>
+                            <td>Fogo, Rocha, Terrestre</td>
+                            <td>Água, Planta, Dragão</td>
+                            <td>Fogo, Água, Gelo, Aço</td>
+                            <td>Elétrico, Planta</td>
+                        </tr>
+                        <tr>
+                            <td>Planta</td>
+                            <td>Água, Rocha, Terrestre</td>
+                            <td>Fogo, Planta, Veneno, Voador, Inseto, Dragão, Aço</td>
+                            <td>Água, Planta, Elétrico, Terra</td>
+                            <td>Fogo, Gelo, Veneno, Voador, Inseto</td>
+                        </tr>
+                        <tr>
+                            <td>Elétrico</td>
+                            <td>Água, Voador</td>
+                            <td>Elétrico, Planta, Dragão, Terrestre</td>
+                            <td>Elétrico, Voador, Aço</td>
+                            <td>Terrestre</td>
+                        </tr>
+                        <tr>
+                            <td>Veneno</td>
+                            <td>Planta, Fada</td>
+                            <td>Veneno, Terra, Rocha, Fantasma</td>
+                            <td>Planta, Lutador, Veneno, Fada, Inseto</td>
+                            <td>Terrestre, Psíquico</td>
+                        </tr>
+                        <tr>
+                            <td>Lutador</td>
+                            <td>Normal, Gelo, Rocha, Sombrio, Aço</td>
+                            <td>Voador, Veneno, Psíquico, Inseto, Fada</td>
+                            <td>Inseto, Rocha, Sombrio</td>
+                            <td>Voador, Psíquico, Fada</td>
+                        </tr>
+                        <tr>
+                            <td>Voador</td>
+                            <td>Planta, Lutador, Inseto</td>
+                            <td>Elétrico, Rocha, Aço</td>
+                            <td>Planta, Lutador, Inseto</td>
+                            <td>Elétrico, Gelo, Rocha</td>
+                        </tr>
+                        <tr>
+                            <td>Terrestre</td>
+                            <td>Fogo, Elétrico, Veneno, Rocha, Aço</td>
+                            <td>Planta, Inseto</td>
+                            <td>Veneno, Rocha</td>
+                            <td>Água, Gelo, Planta</td>
+                        </tr>
+                        <tr>
+                            <td>Inseto</td>
+                            <td>Planta, Psíquico, Sombrio</td>
+                            <td>Fogo, Lutador, Voador, Fantasma, Aço, Fada</td>
+                            <td>Planta, Lutador, Terra</td>
+                            <td>Fogo, Voador, Rocha</td>
+                        </tr>
+                        <tr>
+                            <td>Fantasma</td>
+                            <td>Fantasma, Psíquico</td>
+                            <td>Sombrio</td>
+                            <td>Veneno, Inseto</td>
+                            <td>Fantasma, Sombrio</td>
+                        </tr>
+                        <tr>
+                            <td>Psíquico</td>
+                            <td>Lutador, Veneno</td>
+                            <td>Aço, Psíquico, Sombrio</td>
+                            <td>Lutador, Psíquico</td>
+                            <td>Fantasma, Inseto, Sombrio</td>
+                        </tr>
+                        <tr>
+                            <td>Gelo</td>
+                            <td>Planta, Terra, Voador, Dragão</td>
+                            <td>Fogo, Água, Gelo, Aço</td>
+                            <td>Gelo</td>
+                            <td>Fogo, Lutador, Rocha, Aço</td>
+                        </tr>
+                        <tr>
+                            <td>Aço</td>
+                            <td>Gelo, Rocha, Fada</td>
+                            <td>Fogo, Água, Elétrico, Aço</td>
+                            <td>Normal, Grama, Gelo, Voador, Psíquico, Inseto, Rocha, Dragão, Aço, Fada</td>
+                            <td>Fogo, Lutador, Terrestre</td>
+                        </tr>
+                        <tr>
+                            <td>Fada</td>
+                            <td>Lutador, Dragão, Sombrio</td>
+                            <td>Fogo, Veneno, Aço</td>
+                            <td>Lutador, Inseto, Sombrio</td>
+                            <td>Veneno, Aço</td>
+                        </tr>
+                        <tr>
+                            <td>Sombrio</td>
+                            <td>Fantasma, Psíquico</td>
+                            <td>Lutador, Sombrio, Fada</td>
+                            <td>Fantasma, Sombrio</td>
+                            <td>Lutador, Inseto, Fada</td>
+                        </tr>
+                        <tr>
+                            <td>Dragão</td>
+                            <td>Dragão</td>
+                            <td>Aço, Fada</td>
+                            <td>Fogo, Água, Elétrico, Planta</td>
+                            <td>Gelo, Dragão, Fada</td>
+                        </tr>
+                        <tr>
+                            <td>Rocha</td>
+                            <td>Fogo, Gelo, Voador, Inseto</td>
+                            <td>Lutador, Terra, Aço</td>
+                            <td>Normal, Fogo, Venenoso, Voador</td>
+                            <td>Água, Planta, Lutador, Terra, Aço</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 Mundo Pokémon. Não oficial. Imagens e nomes são propriedade da Nintendo, Game Freak e The Pokémon Company.
+    </footer>
+</body>
+</html>

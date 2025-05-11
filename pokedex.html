@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokédex Completa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pokédex Completa</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="historia.html">História</a>
+            <a href="jogos.html">Jogos</a>
+            <a href="tipos.html">Tipos</a>
+            <a href="anime.html">Anime</a>
+            <a href="curiosidades.html">Curiosidades</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Pokédex</h2>
+            <div class="filter-bar">
+                <input type="text" id="search-bar" placeholder="Pesquisar Pokémon..." oninput="filterPokemon()">
+                <select id="type-filter" onchange="filterPokemon()">
+                    <option value="">Todos os Tipos</option>
+                    <option value="Planta">Planta</option>
+                    <option value="Fogo">Fogo</option>
+                    <option value="Água">Água</option>
+                    <option value="Elétrico">Elétrico</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Veneno">Veneno</option>
+                    <option value="Voador">Voador</option>
+                    <option value="Lutador">Lutador</option>
+                    <option value="Fantasma">Fantasma</option>
+                    <option value="Psíquico">Psíquico</option>
+                    <option value="Inseto">Inseto</option>
+                    <option value="Terrestre">Terrestre</option>
+                    <option value="Dragão">Dragão</option>
+                    <option value="Fada">Fada</option>
+                    <option value="Sombrio">Sombrio</option>
+                    <option value="Aço">Aço</option>
+                    <option value="Gelo">Gelo</option>
+                    <option value="Rocha">Rocha</option>
+                </select>
+            </div>
+            <div class="pokedex">
+                <!-- #001 Bulbasaur -->
+                <div class="pokemon-card" data-info="Bulbasaur: Planta/Veneno. Altura: 0,7m. Peso: 6,9kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur">
+                    <div class="pokemon-name"><span style="color:#888;">#001</span> Bulbasaur</div>
+                    <div class="pokemon-type" style="background:#78C850;">Planta</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 0,7m<br>Peso: 6,9kg</div>
+                </div>
+                <!-- #002 Ivysaur -->
+                <div class="pokemon-card" data-info="Ivysaur: Planta/Veneno. Altura: 1,0m. Peso: 13,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" alt="Ivysaur">
+                    <div class="pokemon-name"><span style="color:#888;">#002</span> Ivysaur</div>
+                    <div class="pokemon-type" style="background:#78C850;">Planta</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 13,0kg</div>
+                </div>
+                <!-- #003 Venusaur -->
+                <div class="pokemon-card" data-info="Venusaur: Planta/Veneno. Altura: 2,0m. Peso: 100,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" alt="Venusaur">
+                    <div class="pokemon-name"><span style="color:#888;">#003</span> Venusaur</div>
+                    <div class="pokemon-type" style="background:#78C850;">Planta</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 2,0m<br>Peso: 100,0kg</div>
+                </div>
+                <!-- #004 Charmander -->
+                <div class="pokemon-card" data-info="Charmander: Fogo. Altura: 0,6m. Peso: 8,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Charmander">
+                    <div class="pokemon-name"><span style="color:#888;">#004</span> Charmander</div>
+                    <div class="pokemon-type" style="background:#F08030;">Fogo</div>
+                    <div class="pokemon-info">Altura: 0,6m<br>Peso: 8,5kg</div>
+                </div>
+                <!-- #005 Charmeleon -->
+                <div class="pokemon-card" data-info="Charmeleon: Fogo. Altura: 1,1m. Peso: 19,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png" alt="Charmeleon">
+                    <div class="pokemon-name"><span style="color:#888;">#005</span> Charmeleon</div>
+                    <div class="pokemon-type" style="background:#F08030;">Fogo</div>
+                    <div class="pokemon-info">Altura: 1,1m<br>Peso: 19,0kg</div>
+                </div>
+                <!-- #006 Charizard -->
+                <div class="pokemon-card" data-info="Charizard: Fogo/Voador. Altura: 1,7m. Peso: 90,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" alt="Charizard">
+                    <div class="pokemon-name"><span style="color:#888;">#006</span> Charizard</div>
+                    <div class="pokemon-type" style="background:#F08030;">Fogo</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-info">Altura: 1,7m<br>Peso: 90,5kg</div>
+                </div>
+                <!-- #007 Squirtle -->
+                <div class="pokemon-card" data-info="Squirtle: Água. Altura: 0,5m. Peso: 9,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Squirtle">
+                    <div class="pokemon-name"><span style="color:#888;">#007</span> Squirtle</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 0,5m<br>Peso: 9,0kg</div>
+                </div>
+                <!-- #008 Wartortle -->
+                <div class="pokemon-card" data-info="Wartortle: Água. Altura: 1,0m. Peso: 22,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png" alt="Wartortle">
+                    <div class="pokemon-name"><span style="color:#888;">#008</span> Wartortle</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 22,5kg</div>
+                </div>
+                <!-- #009 Blastoise -->
+                <div class="pokemon-card" data-info="Blastoise: Água. Altura: 1,6m. Peso: 85,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png" alt="Blastoise">
+                    <div class="pokemon-name"><span style="color:#888;">#009</span> Blastoise</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 1,6m<br>Peso: 85,5kg</div>
+                </div>
+                <!-- #010 Caterpie -->
+                <div class="pokemon-card" data-info="Caterpie: Inseto. Altura: 0,3m. Peso: 2,9kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png" alt="Caterpie">
+                    <div class="pokemon-name"><span style="color:#888;">#010</span> Caterpie</div>
+                    <div class="pokemon-type" style="background:#A8B820;">Inseto</div>
+                    <div class="pokemon-info">Altura: 0,3m<br>Peso: 2,9kg</div>
+                </div>
+                <!-- #011 Metapod -->
+                <div class="pokemon-card" data-info="Metapod: Inseto. Altura: 0,7m. Peso: 9,9kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png" alt="Metapod">
+                    <div class="pokemon-name"><span style="color:#888;">#011</span> Metapod</div>
+                    <div class="pokemon-type" style="background:#A8B820;">Inseto</div>
+                    <div class="pokemon-info">Altura: 0,7m<br>Peso: 9,9kg</div>
+                </div>
+                <!-- #012 Butterfree -->
+                <div class="pokemon-card" data-info="Butterfree: Inseto/Voador. Altura: 1,1m. Peso: 32,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png" alt="Butterfree">
+                    <div class="pokemon-name"><span style="color:#888;">#012</span> Butterfree</div>
+                    <div class="pokemon-type" style="background:#A8B820;">Inseto</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-info">Altura: 1,1m<br>Peso: 32,0kg</div>
+                </div>
+                <!-- #013 Weedle -->
+                <div class="pokemon-card" data-info="Weedle: Inseto/Veneno. Altura: 0,3m. Peso: 3,2kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png" alt="Weedle">
+                    <div class="pokemon-name"><span style="color:#888;">#013</span> Weedle</div>
+                    <div class="pokemon-type" style="background:#A8B820;">Inseto</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 0,3m<br>Peso: 3,2kg</div>
+                </div>
+                <!-- #014 Kakuna -->
+                <div class="pokemon-card" data-info="Kakuna: Inseto/Veneno. Altura: 0,6m. Peso: 10,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png" alt="Kakuna">
+                    <div class="pokemon-name"><span style="color:#888;">#014</span> Kakuna</div>
+                    <div class="pokemon-type" style="background:#A8B820;">Inseto</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 0,6m<br>Peso: 10,0kg</div>
+                </div>
+                <!-- #015 Beedrill -->
+                <div class="pokemon-card" data-info="Beedrill: Inseto/Veneno. Altura: 1,0m. Peso: 29,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png" alt="Beedrill">
+                    <div class="pokemon-name"><span style="color:#888;">#015</span> Beedrill</div>
+                    <div class="pokemon-type" style="background:#A8B820;">Inseto</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 29,5kg</div>
+                </div>
+                <!-- #016 Pidgey -->
+                <div class="pokemon-card" data-info="Pidgey: Normal/Voador. Altura: 0,3m. Peso: 1,8kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png" alt="Pidgey">
+                    <div class="pokemon-name"><span style="color:#888;">#016</span> Pidgey</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-info">Altura: 0,3m<br>Peso: 1,8kg</div>
+                </div>
+                <!-- #017 Pidgeotto -->
+                <div class="pokemon-card" data-info="Pidgeotto: Normal/Voador. Altura: 1,1m. Peso: 30,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png" alt="Pidgeotto">
+                    <div class="pokemon-name"><span style="color:#888;">#017</span> Pidgeotto</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-info">Altura: 1,1m<br>Peso: 30,0kg</div>
+                </div>
+                <!-- #018 Pidgeot -->
+                <div class="pokemon-card" data-info="Pidgeot: Normal/Voador. Altura: 1,5m. Peso: 39,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png" alt="Pidgeot">
+                    <div class="pokemon-name"><span style="color:#888;">#018</span> Pidgeot</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-info">Altura: 1,5m<br>Peso: 39,5kg</div>
+                </div>
+                <!-- #019 Rattata -->
+                <div class="pokemon-card" data-info="Rattata: Normal. Altura: 0,3m. Peso: 3,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png" alt="Rattata">
+                    <div class="pokemon-name"><span style="color:#888;">#019</span> Rattata</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-info">Altura: 0,3m<br>Peso: 3,5kg</div>
+                </div>
+                <!-- #020 Raticate -->
+                <div class="pokemon-card" data-info="Raticate: Normal. Altura: 0,7m. Peso: 18,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png" alt="Raticate">
+                    <div class="pokemon-name"><span style="color:#888;">#020</span> Raticate</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-info">Altura: 0,7m<br>Peso: 18,5kg</div>
+                </div>
+                <!-- #021 Spearow -->
+                <div class="pokemon-card" data-info="Spearow: Normal/Voador. Altura: 0,3m. Peso: 2,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png" alt="Spearow">
+                    <div class="pokemon-name"><span style="color:#888;">#021</span> Spearow</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-info">Altura: 0,3m<br>Peso: 2,0kg</div>
+                </div>
+                <!-- #022 Fearow -->
+                <div class="pokemon-card" data-info="Fearow: Normal/Voador. Altura: 1,2m. Peso: 38,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png" alt="Fearow">
+                    <div class="pokemon-name"><span style="color:#888;">#022</span> Fearow</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-info">Altura: 1,2m<br>Peso: 38,0kg</div>
+                </div>
+                <!-- #023 Ekans -->
+                <div class="pokemon-card" data-info="Ekans: Veneno. Altura: 2,0m. Peso: 6,9kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png" alt="Ekans">
+                    <div class="pokemon-name"><span style="color:#888;">#023</span> Ekans</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 2,0m<br>Peso: 6,9kg</div>
+                </div>
+                <!-- #024 Arbok -->
+                <div class="pokemon-card" data-info="Arbok: Veneno. Altura: 3,5m. Peso: 65,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png" alt="Arbok">
+                    <div class="pokemon-name"><span style="color:#888;">#024</span> Arbok</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 3,5m<br>Peso: 65,0kg</div>
+                </div>
+                <!-- #025 Pikachu -->
+                <div class="pokemon-card" data-info="Pikachu: Elétrico. Altura: 0,4m. Peso: 6,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+                    <div class="pokemon-name"><span style="color:#888;">#025</span> Pikachu</div>
+                    <div class="pokemon-type" style="background:#F8D030;">Elétrico</div>
+                    <div class="pokemon-info">Altura: 0,4m<br>Peso: 6,0kg</div>
+                </div>
+                <!-- #026 Raichu -->
+                <div class="pokemon-card" data-info="Raichu: Elétrico. Altura: 0,8m. Peso: 30,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png" alt="Raichu">
+                    <div class="pokemon-name"><span style="color:#888;">#026</span> Raichu</div>
+                    <div class="pokemon-type" style="background:#F8D030;">Elétrico</div>
+                    <div class="pokemon-info">Altura: 0,8m<br>Peso: 30,0kg</div>
+                </div>
+                <!-- #027 Sandshrew -->
+                <div class="pokemon-card" data-info="Sandshrew: Terrestre. Altura: 0,6m. Peso: 12,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png" alt="Sandshrew">
+                    <div class="pokemon-name"><span style="color:#888;">#027</span> Sandshrew</div>
+                    <div class="pokemon-type" style="background:#E0C068;">Terrestre</div>
+                    <div class="pokemon-info">Altura: 0,6m<br>Peso: 12,0kg</div>
+                </div>
+                <!-- #028 Sandslash -->
+                <div class="pokemon-card" data-info="Sandslash: Terrestre. Altura: 1,0m. Peso: 29,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png" alt="Sandslash">
+                    <div class="pokemon-name"><span style="color:#888;">#028</span> Sandslash</div>
+                    <div class="pokemon-type" style="background:#E0C068;">Terrestre</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 29,5kg</div>
+                </div>
+                <!-- #029 Nidoran♀ -->
+                <div class="pokemon-card" data-info="Nidoran♀: Veneno. Altura: 0,4m. Peso: 7,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png" alt="Nidoran♀">
+                    <div class="pokemon-name"><span style="color:#888;">#029</span> Nidoran♀</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 0,4m<br>Peso: 7,0kg</div>
+                </div>
+                <!-- #030 Nidorina -->
+                <div class="pokemon-card" data-info="Nidorina: Veneno. Altura: 0,8m. Peso: 20,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png" alt="Nidorina">
+                    <div class="pokemon-name"><span style="color:#888;">#030</span> Nidorina</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 0,8m<br>Peso: 20,0kg</div>
+                </div>
+                <!-- #031 Nidoqueen -->
+                <div class="pokemon-card" data-info="Nidoqueen: Veneno/Terrestre. Altura: 1,3m. Peso: 60,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png" alt="Nidoqueen">
+                    <div class="pokemon-name"><span style="color:#888;">#031</span> Nidoqueen</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-type" style="background:#E0C068;">Terrestre</div>
+                    <div class="pokemon-info">Altura: 1,3m<br>Peso: 60,0kg</div>
+                </div>
+                <!-- #032 Nidoran♂ -->
+                <div class="pokemon-card" data-info="Nidoran♂: Veneno. Altura: 0,5m. Peso: 9,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/32.png" alt="Nidoran♂">
+                    <div class="pokemon-name"><span style="color:#888;">#032</span> Nidoran♂</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 0,5m<br>Peso: 9,0kg</div>
+                </div>
+                <!-- #033 Nidorino -->
+                <div class="pokemon-card" data-info="Nidorino: Veneno. Altura: 0,9m. Peso: 19,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png" alt="Nidorino">
+                    <div class="pokemon-name"><span style="color:#888;">#033</span> Nidorino</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 0,9m<br>Peso: 19,5kg</div>
+                </div>
+                <!-- #034 Nidoking -->
+                <div class="pokemon-card" data-info="Nidoking: Veneno/Terrestre. Altura: 1,4m. Peso: 62,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png" alt="Nidoking">
+                    <div class="pokemon-name"><span style="color:#888;">#034</span> Nidoking</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-type" style="background:#E0C068;">Terrestre</div>
+                    <div class="pokemon-info">Altura: 1,4m<br>Peso: 62,0kg</div>
+                </div>
+                <!-- #035 Clefairy -->
+                <div class="pokemon-card" data-info="Clefairy: Fada. Altura: 0,6m. Peso: 7,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png" alt="Clefairy">
+                    <div class="pokemon-name"><span style="color:#888;">#035</span> Clefairy</div>
+                    <div class="pokemon-type" style="background:#EE99AC;">Fada</div>
+                    <div class="pokemon-info">Altura: 0,6m<br>Peso: 7,5kg</div>
+                </div>
+                <!-- #036 Clefable -->
+                <div class="pokemon-card" data-info="Clefable: Fada. Altura: 1,3m. Peso: 40,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png" alt="Clefable">
+                    <div class="pokemon-name"><span style="color:#888;">#036</span> Clefable</div>
+                    <div class="pokemon-type" style="background:#EE99AC;">Fada</div>
+                    <div class="pokemon-info">Altura: 1,3m<br>Peso: 40,0kg</div>
+                </div>
+                <!-- #037 Vulpix -->
+                <div class="pokemon-card" data-info="Vulpix: Fogo. Altura: 0,6m. Peso: 9,9kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png" alt="Vulpix">
+                    <div class="pokemon-name"><span style="color:#888;">#037</span> Vulpix</div>
+                    <div class="pokemon-type" style="background:#F08030;">Fogo</div>
+                    <div class="pokemon-info">Altura: 0,6m<br>Peso: 9,9kg</div>
+                </div>
+                <!-- #038 Ninetales -->
+                <div class="pokemon-card" data-info="Ninetales: Fogo. Altura: 1,1m. Peso: 19,9kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png" alt="Ninetales">
+                    <div class="pokemon-name"><span style="color:#888;">#038</span> Ninetales</div>
+                    <div class="pokemon-type" style="background:#F08030;">Fogo</div>
+                    <div class="pokemon-info">Altura: 1,1m<br>Peso: 19,9kg</div>
+                </div>
+                <!-- #039 Jigglypuff -->
+                <div class="pokemon-card" data-info="Jigglypuff: Normal/Fada. Altura: 0,5m. Peso: 5,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png" alt="Jigglypuff">
+                    <div class="pokemon-name"><span style="color:#888;">#039</span> Jigglypuff</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-type" style="background:#EE99AC;">Fada</div>
+                    <div class="pokemon-info">Altura: 0,5m<br>Peso: 5,5kg</div>
+                </div>
+                <!-- #040 Wigglytuff -->
+                <div class="pokemon-card" data-info="Wigglytuff: Normal/Fada. Altura: 1,0m. Peso: 12,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png" alt="Wigglytuff">
+                    <div class="pokemon-name"><span style="color:#888;">#040</span> Wigglytuff</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-type" style="background:#EE99AC;">Fada</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 12,0kg</div>
+                </div>
+                <!-- #041 Zubat -->
+                <div class="pokemon-card" data-info="Zubat: Voador/Veneno. Altura: 0,8m. Peso: 7,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png" alt="Zubat">
+                    <div class="pokemon-name"><span style="color:#888;">#041</span> Zubat</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 0,8m<br>Peso: 7,5kg</div>
+                </div>
+                <!-- #042 Golbat -->
+                <div class="pokemon-card" data-info="Golbat: Voador/Veneno. Altura: 1,6m. Peso: 55,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png" alt="Golbat">
+                    <div class="pokemon-name"><span style="color:#888;">#042</span> Golbat</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 1,6m<br>Peso: 55,0kg</div>
+                </div>
+                <!-- #043 Oddish -->
+                <div class="pokemon-card" data-info="Oddish: Planta/Veneno. Altura: 0,5m. Peso: 5,4kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png" alt="Oddish">
+                    <div class="pokemon-name"><span style="color:#888;">#043</span> Oddish</div>
+                    <div class="pokemon-type" style="background:#78C850;">Planta</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 0,5m<br>Peso: 5,4kg</div>
+                </div>
+                <!-- #044 Gloom -->
+                <div class="pokemon-card" data-info="Gloom: Planta/Veneno. Altura: 0,8m. Peso: 8,6kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png" alt="Gloom">
+                    <div class="pokemon-name"><span style="color:#888;">#044</span> Gloom</div>
+                    <div class="pokemon-type" style="background:#78C850;">Planta</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 0,8m<br>Peso: 8,6kg</div>
+                </div>
+                <!-- #045 Vileplume -->
+                <div class="pokemon-card" data-info="Vileplume: Planta/Veneno. Altura: 1,2m. Peso: 18,6kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png" alt="Vileplume">
+                    <div class="pokemon-name"><span style="color:#888;">#045</span> Vileplume</div>
+                    <div class="pokemon-type" style="background:#78C850;">Planta</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 1,2m<br>Peso: 18,6kg</div>
+                </div>
+                <!-- #046 Paras -->
+                <div class="pokemon-card" data-info="Paras: Inseto/Planta. Altura: 0,3m. Peso: 5,4kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png" alt="Paras">
+                    <div class="pokemon-name"><span style="color:#888;">#046</span> Paras</div>
+                    <div class="pokemon-type" style="background:#A8B820;">Inseto</div>
+                    <div class="pokemon-type" style="background:#78C850;">Planta</div>
+                    <div class="pokemon-info">Altura: 0,3m<br>Peso: 5,4kg</div>
+                </div>
+                <!-- #047 Parasect -->
+                <div class="pokemon-card" data-info="Parasect: Inseto/Planta. Altura: 1,0m. Peso: 29,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png" alt="Parasect">
+                    <div class="pokemon-name"><span style="color:#888;">#047</span> Parasect</div>
+                    <div class="pokemon-type" style="background:#A8B820;">Inseto</div>
+                    <div class="pokemon-type" style="background:#78C850;">Planta</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 29,5kg</div>
+                </div>
+                <!-- #048 Venonat -->
+                <div class="pokemon-card" data-info="Venonat: Inseto/Veneno. Altura: 1,0m. Peso: 30,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png" alt="Venonat">
+                    <div class="pokemon-name"><span style="color:#888;">#048</span> Venonat</div>
+                    <div class="pokemon-type" style="background:#A8B820;">Inseto</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 30,0kg</div>
+                </div>
+                <!-- #049 Venomoth -->
+                <div class="pokemon-card" data-info="Venomoth: Inseto/Veneno. Altura: 1,5m. Peso: 12,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png" alt="Venomoth">
+                    <div class="pokemon-name"><span style="color:#888;">#049</span> Venomoth</div>
+                    <div class="pokemon-type" style="background:#A8B820;">Inseto</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 1,5m<br>Peso: 12,5kg</div>
+                </div>
+                <!-- #050 Diglett -->
+                <div class="pokemon-card" data-info="Diglett: Terrestre. Altura: 0,2m. Peso: 0,8kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png" alt="Diglett">
+                    <div class="pokemon-name"><span style="color:#888;">#050</span> Diglett</div>
+                    <div class="pokemon-type" style="background:#E0C068;">Terrestre</div>
+                    <div class="pokemon-info">Altura: 0,2m<br>Peso: 0,8kg</div>
+                </div>
+                <!-- #051 Dugtrio -->
+                <div class="pokemon-card" data-info="Dugtrio: Terrestre. Altura: 0,7m. Peso: 33,3kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png" alt="Dugtrio">
+                    <div class="pokemon-name"><span style="color:#888;">#051</span> Dugtrio</div>
+                    <div class="pokemon-type" style="background:#E0C068;">Terrestre</div>
+                    <div class="pokemon-info">Altura: 0,7m<br>Peso: 33,3kg</div>
+                </div>
+                <!-- #052 Meowth -->
+                <div class="pokemon-card" data-info="Meowth: Normal. Altura: 0,4m. Peso: 4,2kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png" alt="Meowth">
+                    <div class="pokemon-name"><span style="color:#888;">#052</span> Meowth</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-info">Altura: 0,4m<br>Peso: 4,2kg</div>
+                </div>
+                <!-- #053 Persian -->
+                <div class="pokemon-card" data-info="Persian: Normal. Altura: 1,0m. Peso: 32,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png" alt="Persian">
+                    <div class="pokemon-name"><span style="color:#888;">#053</span> Persian</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 32,0kg</div>
+                </div>
+                <!-- #054 Psyduck -->
+                <div class="pokemon-card" data-info="Psyduck: Água. Altura: 0,8m. Peso: 19,6kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png" alt="Psyduck">
+                    <div class="pokemon-name"><span style="color:#888;">#054</span> Psyduck</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 0,8m<br>Peso: 19,6kg</div>
+                </div>
+                <!-- #055 Golduck -->
+                <div class="pokemon-card" data-info="Golduck: Água. Altura: 1,7m. Peso: 76,6kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/55.png" alt="Golduck">
+                    <div class="pokemon-name"><span style="color:#888;">#055</span> Golduck</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 1,7m<br>Peso: 76,6kg</div>
+                </div>
+                <!-- #056 Mankey -->
+                <div class="pokemon-card" data-info="Mankey: Lutador. Altura: 0,5m. Peso: 28,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png" alt="Mankey">
+                    <div class="pokemon-name"><span style="color:#888;">#056</span> Mankey</div>
+                    <div class="pokemon-type" style="background:#C03028;">Lutador</div>
+                    <div class="pokemon-info">Altura: 0,5m<br>Peso: 28,0kg</div>
+                </div>
+                <!-- #057 Primeape -->
+                <div class="pokemon-card" data-info="Primeape: Lutador. Altura: 1,0m. Peso: 32,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png" alt="Primeape">
+                    <div class="pokemon-name"><span style="color:#888;">#057</span> Primeape</div>
+                    <div class="pokemon-type" style="background:#C03028;">Lutador</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 32,0kg</div>
+                </div>
+                <!-- #058 Growlithe -->
+                <div class="pokemon-card" data-info="Growlithe: Fogo. Altura: 0,7m. Peso: 19,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png" alt="Growlithe">
+                    <div class="pokemon-name"><span style="color:#888;">#058</span> Growlithe</div>
+                    <div class="pokemon-type" style="background:#F08030;">Fogo</div>
+                    <div class="pokemon-info">Altura: 0,7m<br>Peso: 19,0kg</div>
+                </div>
+                <!-- #059 Arcanine -->
+                <div class="pokemon-card" data-info="Arcanine: Fogo. Altura: 1,9m. Peso: 155,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png" alt="Arcanine">
+                    <div class="pokemon-name"><span style="color:#888;">#059</span> Arcanine</div>
+                    <div class="pokemon-type" style="background:#F08030;">Fogo</div>
+                    <div class="pokemon-info">Altura: 1,9m<br>Peso: 155,0kg</div>
+                </div>
+                <!-- #060 Poliwag -->
+                <div class="pokemon-card" data-info="Poliwag: Água. Altura: 0,6m. Peso: 12,4kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png" alt="Poliwag">
+                    <div class="pokemon-name"><span style="color:#888;">#060</span> Poliwag</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 0,6m<br>Peso: 12,4kg</div>
+                </div>
+                <!-- #061 Poliwhirl -->
+                <div class="pokemon-card" data-info="Poliwhirl: Água. Altura: 1,0m. Peso: 20,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/61.png" alt="Poliwhirl">
+                    <div class="pokemon-name"><span style="color:#888;">#061</span> Poliwhirl</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 20,0kg</div>
+                </div>
+                <!-- #062 Poliwrath -->
+                <div class="pokemon-card" data-info="Poliwrath: Água/Lutador. Altura: 1,3m. Peso: 54,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png" alt="Poliwrath">
+                    <div class="pokemon-name"><span style="color:#888;">#062</span> Poliwrath</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-type" style="background:#C03028;">Lutador</div>
+                    <div class="pokemon-info">Altura: 1,3m<br>Peso: 54,0kg</div>
+                </div>
+                <!-- #063 Abra -->
+                <div class="pokemon-card" data-info="Abra: Psíquico. Altura: 0,9m. Peso: 19,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/63.png" alt="Abra">
+                    <div class="pokemon-name"><span style="color:#888;">#063</span> Abra</div>
+                    <div class="pokemon-type" style="background:#F85888;">Psíquico</div>
+                    <div class="pokemon-info">Altura: 0,9m<br>Peso: 19,5kg</div>
+                </div>
+                <!-- #064 Kadabra -->
+                <div class="pokemon-card" data-info="Kadabra: Psíquico. Altura: 1,3m. Peso: 56,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png" alt="Kadabra">
+                    <div class="pokemon-name"><span style="color:#888;">#064</span> Kadabra</div>
+                    <div class="pokemon-type" style="background:#F85888;">Psíquico</div>
+                    <div class="pokemon-info">Altura: 1,3m<br>Peso: 56,5kg</div>
+                </div>
+                <!-- #065 Alakazam -->
+                <div class="pokemon-card" data-info="Alakazam: Psíquico. Altura: 1,5m. Peso: 48,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png" alt="Alakazam">
+                    <div class="pokemon-name"><span style="color:#888;">#065</span> Alakazam</div>
+                    <div class="pokemon-type" style="background:#F85888;">Psíquico</div>
+                    <div class="pokemon-info">Altura: 1,5m<br>Peso: 48,0kg</div>
+                </div>
+                <!-- #066 Machop -->
+                <div class="pokemon-card" data-info="Machop: Lutador. Altura: 0,8m. Peso: 19,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png" alt="Machop">
+                    <div class="pokemon-name"><span style="color:#888;">#066</span> Machop</div>
+                    <div class="pokemon-type" style="background:#C03028;">Lutador</div>
+                    <div class="pokemon-info">Altura: 0,8m<br>Peso: 19,5kg</div>
+                </div>
+                <!-- #067 Machoke -->
+                <div class="pokemon-card" data-info="Machoke: Lutador. Altura: 1,5m. Peso: 70,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/67.png" alt="Machoke">
+                    <div class="pokemon-name"><span style="color:#888;">#067</span> Machoke</div>
+                    <div class="pokemon-type" style="background:#C03028;">Lutador</div>
+                    <div class="pokemon-info">Altura: 1,5m<br>Peso: 70,5kg</div>
+                </div>
+                <!-- #068 Machamp -->
+                <div class="pokemon-card" data-info="Machamp: Lutador. Altura: 1,6m. Peso: 130,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png" alt="Machamp">
+                    <div class="pokemon-name"><span style="color:#888;">#068</span> Machamp</div>
+                    <div class="pokemon-type" style="background:#C03028;">Lutador</div>
+                    <div class="pokemon-info">Altura: 1,6m<br>Peso: 130,0kg</div>
+                </div>
+                <!-- #069 Bellsprout -->
+                <div class="pokemon-card" data-info="Bellsprout: Planta/Veneno. Altura: 0,7m. Peso: 4,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png" alt="Bellsprout">
+                    <div class="pokemon-name"><span style="color:#888;">#069</span> Bellsprout</div>
+                    <div class="pokemon-type" style="background:#78C850;">Planta</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 0,7m<br>Peso: 4,0kg</div>
+                </div>
+                <!-- #070 Weepinbell -->
+                <div class="pokemon-card" data-info="Weepinbell: Planta/Veneno. Altura: 1,0m. Peso: 6,4kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/70.png" alt="Weepinbell">
+                    <div class="pokemon-name"><span style="color:#888;">#070</span> Weepinbell</div>
+                    <div class="pokemon-type" style="background:#78C850;">Planta</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 6,4kg</div>
+                </div>
+                <!-- #071 Victreebel -->
+                <div class="pokemon-card" data-info="Victreebel: Planta/Veneno. Altura: 1,7m. Peso: 15,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png" alt="Victreebel">
+                    <div class="pokemon-name"><span style="color:#888;">#071</span> Victreebel</div>
+                    <div class="pokemon-type" style="background:#78C850;">Planta</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 1,7m<br>Peso: 15,5kg</div>
+                </div>
+                <!-- #072 Tentacool -->
+                <div class="pokemon-card" data-info="Tentacool: Água/Veneno. Altura: 0,9m. Peso: 45,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/72.png" alt="Tentacool">
+                    <div class="pokemon-name"><span style="color:#888;">#072</span> Tentacool</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 0,9m<br>Peso: 45,5kg</div>
+                </div>
+                <!-- #073 Tentacruel -->
+                <div class="pokemon-card" data-info="Tentacruel: Água/Veneno. Altura: 1,6m. Peso: 55,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png" alt="Tentacruel">
+                    <div class="pokemon-name"><span style="color:#888;">#073</span> Tentacruel</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 1,6m<br>Peso: 55,0kg</div>
+                </div>
+                <!-- #074 Geodude -->
+                <div class="pokemon-card" data-info="Geodude: Rocha/Terrestre. Altura: 0,4m. Peso: 20,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png" alt="Geodude">
+                    <div class="pokemon-name"><span style="color:#888;">#074</span> Geodude</div>
+                    <div class="pokemon-type" style="background:#B8A038;">Rocha</div>
+                    <div class="pokemon-type" style="background:#E0C068;">Terrestre</div>
+                    <div class="pokemon-info">Altura: 0,4m<br>Peso: 20,0kg</div>
+                </div>
+                <!-- #075 Graveler -->
+                <div class="pokemon-card" data-info="Graveler: Rocha/Terrestre. Altura: 1,0m. Peso: 105,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/75.png" alt="Graveler">
+                    <div class="pokemon-name"><span style="color:#888;">#075</span> Graveler</div>
+                    <div class="pokemon-type" style="background:#B8A038;">Rocha</div>
+                    <div class="pokemon-type" style="background:#E0C068;">Terrestre</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 105,0kg</div>
+                </div>
+                <!-- #076 Golem -->
+                <div class="pokemon-card" data-info="Golem: Rocha/Terrestre. Altura: 1,4m. Peso: 300,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png" alt="Golem">
+                    <div class="pokemon-name"><span style="color:#888;">#076</span> Golem</div>
+                    <div class="pokemon-type" style="background:#B8A038;">Rocha</div>
+                    <div class="pokemon-type" style="background:#E0C068;">Terrestre</div>
+                    <div class="pokemon-info">Altura: 1,4m<br>Peso: 300,0kg</div>
+                </div>
+                <!-- #077 Ponyta -->
+                <div class="pokemon-card" data-info="Ponyta: Fogo. Altura: 1,0m. Peso: 30,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png" alt="Ponyta">
+                    <div class="pokemon-name"><span style="color:#888;">#077</span> Ponyta</div>
+                    <div class="pokemon-type" style="background:#F08030;">Fogo</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 30,0kg</div>
+                </div>
+                <!-- #078 Rapidash -->
+                <div class="pokemon-card" data-info="Rapidash: Fogo. Altura: 1,7m. Peso: 95,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/78.png" alt="Rapidash">
+                    <div class="pokemon-name"><span style="color:#888;">#078</span> Rapidash</div>
+                    <div class="pokemon-type" style="background:#F08030;">Fogo</div>
+                    <div class="pokemon-info">Altura: 1,7m<br>Peso: 95,0kg</div>
+                </div>
+                <!-- #079 Slowpoke -->
+                <div class="pokemon-card" data-info="Slowpoke: Água/Psíquico. Altura: 1,2m. Peso: 36,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/79.png" alt="Slowpoke">
+                    <div class="pokemon-name"><span style="color:#888;">#079</span> Slowpoke</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-type" style="background:#F85888;">Psíquico</div>
+                    <div class="pokemon-info">Altura: 1,2m<br>Peso: 36,0kg</div>
+                </div>
+                <!-- #080 Slowbro -->
+                <div class="pokemon-card" data-info="Slowbro: Água/Psíquico. Altura: 1,6m. Peso: 78,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png" alt="Slowbro">
+                    <div class="pokemon-name"><span style="color:#888;">#080</span> Slowbro</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-type" style="background:#F85888;">Psíquico</div>
+                    <div class="pokemon-info">Altura: 1,6m<br>Peso: 78,5kg</div>
+                </div>
+                <!-- #081 Magnemite -->
+                <div class="pokemon-card" data-info="Magnemite: Elétrico/Aço. Altura: 0,3m. Peso: 6,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png" alt="Magnemite">
+                    <div class="pokemon-name"><span style="color:#888;">#081</span> Magnemite</div>
+                    <div class="pokemon-type" style="background:#F8D030;">Elétrico</div>
+                    <div class="pokemon-type" style="background:#B8B8D0;">Aço</div>
+                    <div class="pokemon-info">Altura: 0,3m<br>Peso: 6,0kg</div>
+                </div>
+                <!-- #082 Magneton -->
+                <div class="pokemon-card" data-info="Magneton: Elétrico/Aço. Altura: 1,0m. Peso: 60,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png" alt="Magneton">
+                    <div class="pokemon-name"><span style="color:#888;">#082</span> Magneton</div>
+                    <div class="pokemon-type" style="background:#F8D030;">Elétrico</div>
+                    <div class="pokemon-type" style="background:#B8B8D0;">Aço</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 60,0kg</div>
+                </div>
+                <!-- #083 Farfetch'd -->
+                <div class="pokemon-card" data-info="Farfetch'd: Normal/Voador. Altura: 0,8m. Peso: 15,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/83.png" alt="Farfetch'd">
+                    <div class="pokemon-name"><span style="color:#888;">#083</span> Farfetch'd</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-info">Altura: 0,8m<br>Peso: 15,0kg</div>
+                </div>
+                <!-- #084 Doduo -->
+                <div class="pokemon-card" data-info="Doduo: Normal/Voador. Altura: 1,4m. Peso: 39,2kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/84.png" alt="Doduo">
+                    <div class="pokemon-name"><span style="color:#888;">#084</span> Doduo</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-info">Altura: 1,4m<br>Peso: 39,2kg</div>
+                </div>
+                <!-- #085 Dodrio -->
+                <div class="pokemon-card" data-info="Dodrio: Normal/Voador. Altura: 1,8m. Peso: 85,2kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/85.png" alt="Dodrio">
+                    <div class="pokemon-name"><span style="color:#888;">#085</span> Dodrio</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-info">Altura: 1,8m<br>Peso: 85,2kg</div>
+                </div>
+                <!-- #086 Seel -->
+                <div class="pokemon-card" data-info="Seel: Água. Altura: 1,1m. Peso: 90,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png" alt="Seel">
+                    <div class="pokemon-name"><span style="color:#888;">#086</span> Seel</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 1,1m<br>Peso: 90,0kg</div>
+                </div>
+                <!-- #087 Dewgong -->
+                <div class="pokemon-card" data-info="Dewgong: Água/Gelo. Altura: 1,7m. Peso: 120,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png" alt="Dewgong">
+                    <div class="pokemon-name"><span style="color:#888;">#087</span> Dewgong</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-type" style="background:#98D8D8;">Gelo</div>
+                    <div class="pokemon-info">Altura: 1,7m<br>Peso: 120,0kg</div>
+                </div>
+                <!-- #088 Grimer -->
+                <div class="pokemon-card" data-info="Grimer: Veneno. Altura: 0,9m. Peso: 30,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/88.png" alt="Grimer">
+                    <div class="pokemon-name"><span style="color:#888;">#088</span> Grimer</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 0,9m<br>Peso: 30,0kg</div>
+                </div>
+                <!-- #089 Muk -->
+                <div class="pokemon-card" data-info="Muk: Veneno. Altura: 1,2m. Peso: 30,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png" alt="Muk">
+                    <div class="pokemon-name"><span style="color:#888;">#089</span> Muk</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 1,2m<br>Peso: 30,0kg</div>
+                </div>
+                <!-- #090 Shellder -->
+                <div class="pokemon-card" data-info="Shellder: Água. Altura: 0,3m. Peso: 4,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png" alt="Shellder">
+                    <div class="pokemon-name"><span style="color:#888;">#090</span> Shellder</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 0,3m<br>Peso: 4,0kg</div>
+                </div>
+                <!-- #091 Cloyster -->
+                <div class="pokemon-card" data-info="Cloyster: Água/Gelo. Altura: 1,5m. Peso: 132,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png" alt="Cloyster">
+                    <div class="pokemon-name"><span style="color:#888;">#091</span> Cloyster</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-type" style="background:#98D8D8;">Gelo</div>
+                    <div class="pokemon-info">Altura: 1,5m<br>Peso: 132,5kg</div>
+                </div>
+                <!-- #092 Gastly -->
+                <div class="pokemon-card" data-info="Gastly: Fantasma/Veneno. Altura: 1,3m. Peso: 0,1kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png" alt="Gastly">
+                    <div class="pokemon-name"><span style="color:#888;">#092</span> Gastly</div>
+                    <div class="pokemon-type" style="background:#705898;">Fantasma</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 1,3m<br>Peso: 0,1kg</div>
+                </div>
+                <!-- #093 Haunter -->
+                <div class="pokemon-card" data-info="Haunter: Fantasma/Veneno. Altura: 1,6m. Peso: 0,1kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png" alt="Haunter">
+                    <div class="pokemon-name"><span style="color:#888;">#093</span> Haunter</div>
+                    <div class="pokemon-type" style="background:#705898;">Fantasma</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 1,6m<br>Peso: 0,1kg</div>
+                </div>
+                <!-- #094 Gengar -->
+                <div class="pokemon-card" data-info="Gengar: Fantasma/Veneno. Altura: 1,5m. Peso: 40,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png" alt="Gengar">
+                    <div class="pokemon-name"><span style="color:#888;">#094</span> Gengar</div>
+                    <div class="pokemon-type" style="background:#705898;">Fantasma</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 1,5m<br>Peso: 40,5kg</div>
+                </div>
+                <!-- #095 Onix -->
+                <div class="pokemon-card" data-info="Onix: Rocha/Terrestre. Altura: 8,8m. Peso: 210,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png" alt="Onix">
+                    <div class="pokemon-name"><span style="color:#888;">#095</span> Onix</div>
+                    <div class="pokemon-type" style="background:#B8A038;">Rocha</div>
+                    <div class="pokemon-type" style="background:#E0C068;">Terrestre</div>
+                    <div class="pokemon-info">Altura: 8,8m<br>Peso: 210,0kg</div>
+                </div>
+                <!-- #096 Drowzee -->
+                <div class="pokemon-card" data-info="Drowzee: Psíquico. Altura: 1,0m. Peso: 32,4kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png" alt="Drowzee">
+                    <div class="pokemon-name"><span style="color:#888;">#096</span> Drowzee</div>
+                    <div class="pokemon-type" style="background:#F85888;">Psíquico</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 32,4kg</div>
+                </div>
+                <!-- #097 Hypno -->
+                <div class="pokemon-card" data-info="Hypno: Psíquico. Altura: 1,6m. Peso: 75,6kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png" alt="Hypno">
+                    <div class="pokemon-name"><span style="color:#888;">#097</span> Hypno</div>
+                    <div class="pokemon-type" style="background:#F85888;">Psíquico</div>
+                    <div class="pokemon-info">Altura: 1,6m<br>Peso: 75,6kg</div>
+                </div>
+                <!-- #098 Krabby -->
+                <div class="pokemon-card" data-info="Krabby: Água. Altura: 0,4m. Peso: 6,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png" alt="Krabby">
+                    <div class="pokemon-name"><span style="color:#888;">#098</span> Krabby</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 0,4m<br>Peso: 6,5kg</div>
+                </div>
+                <!-- #099 Kingler -->
+                <div class="pokemon-card" data-info="Kingler: Água. Altura: 1,3m. Peso: 60,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png" alt="Kingler">
+                    <div class="pokemon-name"><span style="color:#888;">#099</span> Kingler</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 1,3m<br>Peso: 60,0kg</div>
+                </div>
+                <!-- #100 Voltorb -->
+                <div class="pokemon-card" data-info="Voltorb: Elétrico. Altura: 0,5m. Peso: 10,4kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png" alt="Voltorb">
+                    <div class="pokemon-name"><span style="color:#888;">#100</span> Voltorb</div>
+                    <div class="pokemon-type" style="background:#F8D030;">Elétrico</div>
+                    <div class="pokemon-info">Altura: 0,5m<br>Peso: 10,4kg</div>
+                </div>
+                <!-- #101 Electrode -->
+                <div class="pokemon-card" data-info="Electrode: Elétrico. Altura: 1,2m. Peso: 66,6kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png" alt="Electrode">
+                    <div class="pokemon-name"><span style="color:#888;">#101</span> Electrode</div>
+                    <div class="pokemon-type" style="background:#F8D030;">Elétrico</div>
+                    <div class="pokemon-info">Altura: 1,2m<br>Peso: 66,6kg</div>
+                </div>
+                <!-- #102 Exeggcute -->
+                <div class="pokemon-card" data-info="Exeggcute: Planta/Psíquico. Altura: 0,4m. Peso: 2,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/102.png" alt="Exeggcute">
+                    <div class="pokemon-name"><span style="color:#888;">#102</span> Exeggcute</div>
+                    <div class="pokemon-type" style="background:#78C850;">Planta</div>
+                    <div class="pokemon-type" style="background:#F85888;">Psíquico</div>
+                    <div class="pokemon-info">Altura: 0,4m<br>Peso: 2,5kg</div>
+                </div>
+                <!-- #103 Exeggutor -->
+                <div class="pokemon-card" data-info="Exeggutor: Planta/Psíquico. Altura: 2,0m. Peso: 120,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png" alt="Exeggutor">
+                    <div class="pokemon-name"><span style="color:#888;">#103</span> Exeggutor</div>
+                    <div class="pokemon-type" style="background:#78C850;">Planta</div>
+                    <div class="pokemon-type" style="background:#F85888;">Psíquico</div>
+                    <div class="pokemon-info">Altura: 2,0m<br>Peso: 120,0kg</div>
+                </div>
+                <!-- #104 Cubone -->
+                <div class="pokemon-card" data-info="Cubone: Terrestre. Altura: 0,4m. Peso: 6,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png" alt="Cubone">
+                    <div class="pokemon-name"><span style="color:#888;">#104</span> Cubone</div>
+                    <div class="pokemon-type" style="background:#E0C068;">Terrestre</div>
+                    <div class="pokemon-info">Altura: 0,4m<br>Peso: 6,5kg</div>
+                </div>
+                <!-- #105 Marowak -->
+                <div class="pokemon-card" data-info="Marowak: Terrestre. Altura: 1,0m. Peso: 45,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png" alt="Marowak">
+                    <div class="pokemon-name"><span style="color:#888;">#105</span> Marowak</div>
+                    <div class="pokemon-type" style="background:#E0C068;">Terrestre</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 45,0kg</div>
+                </div>
+                <!-- #106 Hitmonlee -->
+                <div class="pokemon-card" data-info="Hitmonlee: Lutador. Altura: 1,5m. Peso: 49,8kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png" alt="Hitmonlee">
+                    <div class="pokemon-name"><span style="color:#888;">#106</span> Hitmonlee</div>
+                    <div class="pokemon-type" style="background:#C03028;">Lutador</div>
+                    <div class="pokemon-info">Altura: 1,5m<br>Peso: 49,8kg</div>
+                </div>
+                <!-- #107 Hitmonchan -->
+                <div class="pokemon-card" data-info="Hitmonchan: Lutador. Altura: 1,4m. Peso: 50,2kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png" alt="Hitmonchan">
+                    <div class="pokemon-name"><span style="color:#888;">#107</span> Hitmonchan</div>
+                    <div class="pokemon-type" style="background:#C03028;">Lutador</div>
+                    <div class="pokemon-info">Altura: 1,4m<br>Peso: 50,2kg</div>
+                </div>
+                <!-- #108 Lickitung -->
+                <div class="pokemon-card" data-info="Lickitung: Normal. Altura: 1,2m. Peso: 65,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png" alt="Lickitung">
+                    <div class="pokemon-name"><span style="color:#888;">#108</span> Lickitung</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-info">Altura: 1,2m<br>Peso: 65,5kg</div>
+                </div>
+                <!-- #109 Koffing -->
+                <div class="pokemon-card" data-info="Koffing: Veneno. Altura: 0,6m. Peso: 1,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png" alt="Koffing">
+                    <div class="pokemon-name"><span style="color:#888;">#109</span> Koffing</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 0,6m<br>Peso: 1,0kg</div>
+                </div>
+                <!-- #110 Weezing -->
+                <div class="pokemon-card" data-info="Weezing: Veneno. Altura: 1,2m. Peso: 9,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png" alt="Weezing">
+                    <div class="pokemon-name"><span style="color:#888;">#110</span> Weezing</div>
+                    <div class="pokemon-type" style="background:#A040A0;">Veneno</div>
+                    <div class="pokemon-info">Altura: 1,2m<br>Peso: 9,5kg</div>
+                </div>
+                <!-- #111 Rhyhorn -->
+                <div class="pokemon-card" data-info="Rhyhorn: Terra/Rocha. Altura: 1,0m. Peso: 115,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png" alt="Rhyhorn">
+                    <div class="pokemon-name"><span style="color:#888;">#111</span> Rhyhorn</div>
+                    <div class="pokemon-type" style="background:#E0C068;">Terrestre</div>
+                    <div class="pokemon-type" style="background:#B8A038;">Rocha</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 115,0kg</div>
+                </div>
+                <!-- #112 Rhydon -->
+                <div class="pokemon-card" data-info="Rhydon: Terra/Rocha. Altura: 1,9m. Peso: 120,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png" alt="Rhydon">
+                    <div class="pokemon-name"><span style="color:#888;">#112</span> Rhydon</div>
+                    <div class="pokemon-type" style="background:#E0C068;">Terrestre</div>
+                    <div class="pokemon-type" style="background:#B8A038;">Rocha</div>
+                    <div class="pokemon-info">Altura: 1,9m<br>Peso: 120,0kg</div>
+                </div>
+                <!-- #113 Chansey -->
+                <div class="pokemon-card" data-info="Chansey: Normal. Altura: 1,1m. Peso: 34,6kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png" alt="Chansey">
+                    <div class="pokemon-name"><span style="color:#888;">#113</span> Chansey</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-info">Altura: 1,1m<br>Peso: 34,6kg</div>
+                </div>
+                <!-- #114 Tangela -->
+                <div class="pokemon-card" data-info="Tangela: Planta. Altura: 1,0m. Peso: 35,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png" alt="Tangela">
+                    <div class="pokemon-name"><span style="color:#888;">#114</span> Tangela</div>
+                    <div class="pokemon-type" style="background:#78C850;">Planta</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 35,0kg</div>
+                </div>
+                <!-- #115 Kangaskhan -->
+                <div class="pokemon-card" data-info="Kangaskhan: Normal. Altura: 2,2m. Peso: 80,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png" alt="Kangaskhan">
+                    <div class="pokemon-name"><span style="color:#888;">#115</span> Kangaskhan</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-info">Altura: 2,2m<br>Peso: 80,0kg</div>
+                </div>
+                <!-- #116 Horsea -->
+                <div class="pokemon-card" data-info="Horsea: Água. Altura: 0,4m. Peso: 8,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/116.png" alt="Horsea">
+                    <div class="pokemon-name"><span style="color:#888;">#116</span> Horsea</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 0,4m<br>Peso: 8,0kg</div>
+                </div>
+                <!-- #117 Seadra -->
+                <div class="pokemon-card" data-info="Seadra: Água. Altura: 1,2m. Peso: 25,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/117.png" alt="Seadra">
+                    <div class="pokemon-name"><span style="color:#888;">#117</span> Seadra</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 1,2m<br>Peso: 25,0kg</div>
+                </div>
+                <!-- #118 Goldeen -->
+                <div class="pokemon-card" data-info="Goldeen: Água. Altura: 0,6m. Peso: 15,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png" alt="Goldeen">
+                    <div class="pokemon-name"><span style="color:#888;">#118</span> Goldeen</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 0,6m<br>Peso: 15,0kg</div>
+                </div>
+                <!-- #119 Seaking -->
+                <div class="pokemon-card" data-info="Seaking: Água. Altura: 1,3m. Peso: 39,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png" alt="Seaking">
+                    <div class="pokemon-name"><span style="color:#888;">#119</span> Seaking</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 1,3m<br>Peso: 39,0kg</div>
+                </div>
+                <!-- #120 Staryu -->
+                <div class="pokemon-card" data-info="Staryu: Água. Altura: 0,8m. Peso: 34,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png" alt="Staryu">
+                    <div class="pokemon-name"><span style="color:#888;">#120</span> Staryu</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 0,8m<br>Peso: 34,5kg</div>
+                </div>
+                <!-- #121 Starmie -->
+                <div class="pokemon-card" data-info="Starmie: Água/Psíquico. Altura: 1,1m. Peso: 80,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png" alt="Starmie">
+                    <div class="pokemon-name"><span style="color:#888;">#121</span> Starmie</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-type" style="background:#F85888;">Psíquico</div>
+                    <div class="pokemon-info">Altura: 1,1m<br>Peso: 80,0kg</div>
+                </div>
+                <!-- #122 Mr. Mime -->
+                <div class="pokemon-card" data-info="Mr. Mime: Psíquico/Fada. Altura: 1,3m. Peso: 54,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png" alt="Mr. Mime">
+                    <div class="pokemon-name"><span style="color:#888;">#122</span> Mr. Mime</div>
+                    <div class="pokemon-type" style="background:#F85888;">Psíquico</div>
+                    <div class="pokemon-type" style="background:#EE99AC;">Fada</div>
+                    <div class="pokemon-info">Altura: 1,3m<br>Peso: 54,5kg</div>
+                </div>
+                <!-- #123 Scyther -->
+                <div class="pokemon-card" data-info="Scyther: Inseto/Voador. Altura: 1,5m. Peso: 56,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png" alt="Scyther">
+                    <div class="pokemon-name"><span style="color:#888;">#123</span> Scyther</div>
+                    <div class="pokemon-type" style="background:#A8B820;">Inseto</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-info">Altura: 1,5m<br>Peso: 56,0kg</div>
+                </div>
+                <!-- #124 Jynx -->
+                <div class="pokemon-card" data-info="Jynx: Gelo/Psíquico. Altura: 1,4m. Peso: 40,6kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png" alt="Jynx">
+                    <div class="pokemon-name"><span style="color:#888;">#124</span> Jynx</div>
+                    <div class="pokemon-type" style="background:#98D8D8;">Gelo</div>
+                    <div class="pokemon-type" style="background:#F85888;">Psíquico</div>
+                    <div class="pokemon-info">Altura: 1,4m<br>Peso: 40,6kg</div>
+                </div>
+                <!-- #125 Electabuzz -->
+                <div class="pokemon-card" data-info="Electabuzz: Elétrico. Altura: 1,1m. Peso: 30,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/125.png" alt="Electabuzz">
+                    <div class="pokemon-name"><span style="color:#888;">#125</span> Electabuzz</div>
+                    <div class="pokemon-type" style="background:#F8D030;">Elétrico</div>
+                    <div class="pokemon-info">Altura: 1,1m<br>Peso: 30,0kg</div>
+                </div>
+                <!-- #126 Magmar -->
+                <div class="pokemon-card" data-info="Magmar: Fogo. Altura: 1,3m. Peso: 44,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png" alt="Magmar">
+                    <div class="pokemon-name"><span style="color:#888;">#126</span> Magmar</div>
+                    <div class="pokemon-type" style="background:#F08030;">Fogo</div>
+                    <div class="pokemon-info">Altura: 1,3m<br>Peso: 44,5kg</div>
+                </div>
+                <!-- #127 Pinsir -->
+                <div class="pokemon-card" data-info="Pinsir: Inseto. Altura: 1,5m. Peso: 55,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png" alt="Pinsir">
+                    <div class="pokemon-name"><span style="color:#888;">#127</span> Pinsir</div>
+                    <div class="pokemon-type" style="background:#A8B820;">Inseto</div>
+                    <div class="pokemon-info">Altura: 1,5m<br>Peso: 55,0kg</div>
+                </div>
+                <!-- #128 Tauros -->
+                <div class="pokemon-card" data-info="Tauros: Normal. Altura: 1,4m. Peso: 88,4kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png" alt="Tauros">
+                    <div class="pokemon-name"><span style="color:#888;">#128</span> Tauros</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-info">Altura: 1,4m<br>Peso: 88,4kg</div>
+                </div>
+                <!-- #129 Magikarp -->
+                <div class="pokemon-card" data-info="Magikarp: Água. Altura: 0,9m. Peso: 10,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png" alt="Magikarp">
+                    <div class="pokemon-name"><span style="color:#888;">#129</span> Magikarp</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 0,9m<br>Peso: 10,0kg</div>
+                </div>
+                <!-- #130 Gyarados -->
+                <div class="pokemon-card" data-info="Gyarados: Água/Voador. Altura: 6,5m. Peso: 235,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png" alt="Gyarados">
+                    <div class="pokemon-name"><span style="color:#888;">#130</span> Gyarados</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-info">Altura: 6,5m<br>Peso: 235,0kg</div>
+                </div>
+                <!-- #131 Lapras -->
+                <div class="pokemon-card" data-info="Lapras: Água/Gelo. Altura: 2,5m. Peso: 220,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png" alt="Lapras">
+                    <div class="pokemon-name"><span style="color:#888;">#131</span> Lapras</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-type" style="background:#98D8D8;">Gelo</div>
+                    <div class="pokemon-info">Altura: 2,5m<br>Peso: 220,0kg</div>
+                </div>
+                <!-- #132 Ditto -->
+                <div class="pokemon-card" data-info="Ditto: Normal. Altura: 0,3m. Peso: 4,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" alt="Ditto">
+                    <div class="pokemon-name"><span style="color:#888;">#132</span> Ditto</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-info">Altura: 0,3m<br>Peso: 4,0kg</div>
+                </div>
+                <!-- #133 Eevee -->
+                <div class="pokemon-card" data-info="Eevee: Normal. Altura: 0,3m. Peso: 6,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png" alt="Eevee">
+                    <div class="pokemon-name"><span style="color:#888;">#133</span> Eevee</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-info">Altura: 0,3m<br>Peso: 6,5kg</div>
+                </div>
+                <!-- #134 Vaporeon -->
+                <div class="pokemon-card" data-info="Vaporeon: Água. Altura: 1,0m. Peso: 29,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png" alt="Vaporeon">
+                    <div class="pokemon-name"><span style="color:#888;">#134</span> Vaporeon</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 29,0kg</div>
+                </div>
+                <!-- #135 Jolteon -->
+                <div class="pokemon-card" data-info="Jolteon: Elétrico. Altura: 0,8m. Peso: 24,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png" alt="Jolteon">
+                    <div class="pokemon-name"><span style="color:#888;">#135</span> Jolteon</div>
+                    <div class="pokemon-type" style="background:#F8D030;">Elétrico</div>
+                    <div class="pokemon-info">Altura: 0,8m<br>Peso: 24,5kg</div>
+                </div>
+                <!-- #136 Flareon -->
+                <div class="pokemon-card" data-info="Flareon: Fogo. Altura: 0,9m. Peso: 25,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png" alt="Flareon">
+                    <div class="pokemon-name"><span style="color:#888;">#136</span> Flareon</div>
+                    <div class="pokemon-type" style="background:#F08030;">Fogo</div>
+                    <div class="pokemon-info">Altura: 0,9m<br>Peso: 25,0kg</div>
+                </div>
+                <!-- #137 Porygon -->
+                <div class="pokemon-card" data-info="Porygon: Normal. Altura: 0,8m. Peso: 36,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png" alt="Porygon">
+                    <div class="pokemon-name"><span style="color:#888;">#137</span> Porygon</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-info">Altura: 0,8m<br>Peso: 36,5kg</div>
+                </div>
+                <!-- #138 Omanyte -->
+                <div class="pokemon-card" data-info="Omanyte: Rocha/Água. Altura: 0,4m. Peso: 7,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png" alt="Omanyte">
+                    <div class="pokemon-name"><span style="color:#888;">#138</span> Omanyte</div>
+                    <div class="pokemon-type" style="background:#B8A038;">Rocha</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 0,4m<br>Peso: 7,5kg</div>
+                </div>
+                <!-- #139 Omastar -->
+                <div class="pokemon-card" data-info="Omastar: Rocha/Água. Altura: 1,0m. Peso: 35,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png" alt="Omastar">
+                    <div class="pokemon-name"><span style="color:#888;">#139</span> Omastar</div>
+                    <div class="pokemon-type" style="background:#B8A038;">Rocha</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 1,0m<br>Peso: 35,0kg</div>
+                </div>
+                <!-- #140 Kabuto -->
+                <div class="pokemon-card" data-info="Kabuto: Rocha/Água. Altura: 0,5m. Peso: 11,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png" alt="Kabuto">
+                    <div class="pokemon-name"><span style="color:#888;">#140</span> Kabuto</div>
+                    <div class="pokemon-type" style="background:#B8A038;">Rocha</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 0,5m<br>Peso: 11,5kg</div>
+                </div>
+                <!-- #141 Kabutops -->
+                <div class="pokemon-card" data-info="Kabutops: Rocha/Água. Altura: 1,3m. Peso: 40,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png" alt="Kabutops">
+                    <div class="pokemon-name"><span style="color:#888;">#141</span> Kabutops</div>
+                    <div class="pokemon-type" style="background:#B8A038;">Rocha</div>
+                    <div class="pokemon-type" style="background:#6890F0;">Água</div>
+                    <div class="pokemon-info">Altura: 1,3m<br>Peso: 40,5kg</div>
+                </div>
+                <!-- #142 Aerodactyl -->
+                <div class="pokemon-card" data-info="Aerodactyl: Rocha/Voador. Altura: 1,8m. Peso: 59,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png" alt="Aerodactyl">
+                    <div class="pokemon-name"><span style="color:#888;">#142</span> Aerodactyl</div>
+                    <div class="pokemon-type" style="background:#B8A038;">Rocha</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-info">Altura: 1,8m<br>Peso: 59,0kg</div>
+                </div>
+                <!-- #143 Snorlax -->
+                <div class="pokemon-card" data-info="Snorlax: Normal. Altura: 2,1m. Peso: 460,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png" alt="Snorlax">
+                    <div class="pokemon-name"><span style="color:#888;">#143</span> Snorlax</div>
+                    <div class="pokemon-type" style="background:#A8A878;">Normal</div>
+                    <div class="pokemon-info">Altura: 2,1m<br>Peso: 460,0kg</div>
+                </div>
+                <!-- #144 Articuno -->
+                <div class="pokemon-card" data-info="Articuno: Gelo/Voador. Altura: 1,7m. Peso: 55,4kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png" alt="Articuno">
+                    <div class="pokemon-name"><span style="color:#888;">#144</span> Articuno</div>
+                    <div class="pokemon-type" style="background:#98D8D8;">Gelo</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-info">Altura: 1,7m<br>Peso: 55,4kg</div>
+                </div>
+                <!-- #145 Zapdos -->
+                <div class="pokemon-card" data-info="Zapdos: Elétrico/Voador. Altura: 1,6m. Peso: 52,6kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png" alt="Zapdos">
+                    <div class="pokemon-name"><span style="color:#888;">#145</span> Zapdos</div>
+                    <div class="pokemon-type" style="background:#F8D030;">Elétrico</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-info">Altura: 1,6m<br>Peso: 52,6kg</div>
+                </div>
+                <!-- #146 Moltres -->
+                <div class="pokemon-card" data-info="Moltres: Fogo/Voador. Altura: 2,0m. Peso: 60,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png" alt="Moltres">
+                    <div class="pokemon-name"><span style="color:#888;">#146</span> Moltres</div>
+                    <div class="pokemon-type" style="background:#F08030;">Fogo</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-info">Altura: 2,0m<br>Peso: 60,0kg</div>
+                </div>
+                <!-- #147 Dratini -->
+                <div class="pokemon-card" data-info="Dratini: Dragão. Altura: 1,8m. Peso: 3,3kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png" alt="Dratini">
+                    <div class="pokemon-name"><span style="color:#888;">#147</span> Dratini</div>
+                    <div class="pokemon-type" style="background:#6F35FC;">Dragão</div>
+                    <div class="pokemon-info">Altura: 1,8m<br>Peso: 3,3kg</div>
+                </div>
+                <!-- #148 Dragonair -->
+                <div class="pokemon-card" data-info="Dragonair: Dragão. Altura: 4,0m. Peso: 16,5kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png" alt="Dragonair">
+                    <div class="pokemon-name"><span style="color:#888;">#148</span> Dragonair</div>
+                    <div class="pokemon-type" style="background:#6F35FC;">Dragão</div>
+                    <div class="pokemon-info">Altura: 4,0m<br>Peso: 16,5kg</div>
+                </div>
+                <!-- #149 Dragonite -->
+                <div class="pokemon-card" data-info="Dragonite: Dragão/Voador. Altura: 2,2m. Peso: 210,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png" alt="Dragonite">
+                    <div class="pokemon-name"><span style="color:#888;">#149</span> Dragonite</div>
+                    <div class="pokemon-type" style="background:#6F35FC;">Dragão</div>
+                    <div class="pokemon-type" style="background:#A890F0;">Voador</div>
+                    <div class="pokemon-info">Altura: 2,2m<br>Peso: 210,0kg</div>
+                </div>
+                <!-- #150 Mewtwo -->
+                <div class="pokemon-card" data-info="Mewtwo: Psíquico. Altura: 2,0m. Peso: 122,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png" alt="Mewtwo">
+                    <div class="pokemon-name"><span style="color:#888;">#150</span> Mewtwo</div>
+                    <div class="pokemon-type" style="background:#F85888;">Psíquico</div>
+                    <div class="pokemon-info">Altura: 2,0m<br>Peso: 122,0kg</div>
+                </div>
+                <!-- #151 Mew -->
+                <div class="pokemon-card" data-info="Mew: Psíquico. Altura: 0,4m. Peso: 4,0kg.">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png" alt="Mew">
+                    <div class="pokemon-name"><span style="color:#888;">#151</span> Mew</div>
+                    <div class="pokemon-type" style="background:#F85888;">Psíquico</div>
+                    <div class="pokemon-info">Altura: 0,4m<br>Peso: 4,0kg</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 Mundo Pokémon. Não oficial. Imagens e nomes são propriedade da Nintendo, Game Freak e The Pokémon Company.
+    </footer>
+    <script>
+        function filterPokemon() {
+            const searchInput = document.getElementById('search-bar').value.toLowerCase();
+            const typeFilter = document.getElementById('type-filter').value;
+            const pokemonCards = document.querySelectorAll('.pokemon-card');
+
+            pokemonCards.forEach(card => {
+                const name = card.querySelector('.pokemon-name').textContent.toLowerCase();
+                const types = Array.from(card.querySelectorAll('.pokemon-type')).map(type => type.textContent);
+
+                const matchesName = name.includes(searchInput);
+                const matchesType = !typeFilter || types.includes(typeFilter);
+
+                if (matchesName && matchesType) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
